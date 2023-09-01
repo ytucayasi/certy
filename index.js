@@ -12,6 +12,10 @@ const programaEstudioRoute = require("./routes/programaEstudioRoute");
 const moduloFormativoRoute = require("./routes/moduloFormativoRoute");
 const unidadCompetenciaRoute = require("./routes/unidadCompetenciaRoute");
 const indicadorLogroRoute = require("./routes/indicadorLogroRoute");
+const certificadoModularRoute = require("./routes/certificadoModularRoute");
+const certificadoAuxiliarRoute = require("./routes/certificadoAuxiliarRoute");
+const certificadoGradoRoute = require("./routes/certificadoGradoRoute");
+const certificadoTituloRoute = require("./routes/certificadoTituloRoute");
 
 app.use(express.json());
 
@@ -35,6 +39,10 @@ app.use("/programa-estudio", programaEstudioRoute);
 app.use("/modulo-formativo", moduloFormativoRoute);
 app.use("/unidad-competencia", unidadCompetenciaRoute);
 app.use("/indicador-logro", indicadorLogroRoute);
+app.use("/certificado-modular", certificadoModularRoute);
+app.use("/certificado-auxiliar", certificadoAuxiliarRoute);
+app.use("/certificado-grado", certificadoGradoRoute);
+app.use("/certificado-titulo", certificadoTituloRoute);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
